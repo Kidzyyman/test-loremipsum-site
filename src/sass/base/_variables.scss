@@ -1,0 +1,30 @@
+$white: #fff;
+$lightBlue: #3e9cdc;
+$softDarkBlue: #286690;
+$softBlue: #43abf0;
+$softLightBlue: #42a9ed;
+$darkBlue: #10101d;
+$black: #000;
+$blueGrey: #3d4050;
+$order-background: #272733;
+$greyLight: #bbbbbb;
+$softGrey: #c4c4c4;
+
+//header-vars
+$header-bg: $darkBlue;
+$header-opacity: 0.9;
+$header-link: $softBlue;
+
+//media-queries breakpoints
+
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$font-size-clamp: clamp(1rem, 0.6rem + 2vw, 1.8rem);
+$font-size-clamp_2: clamp(1rem, 0.6rem + 2vw, 3rem);
+$font-size-clamp_orderTitle: clamp(1rem, 0.6rem + 2vw, 2rem);
+$font-size-clamp_orderSubtitle: clamp(1rem, 0.6rem + 2vw, 1.125rem);

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@800&family=Suez+One&display=swap');
+
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/animations';
+
+* {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/order';
+@import 'blocks/footer';
