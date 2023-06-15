@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .order {
 	position: relative;
 	min-height: 95vh;
@@ -266,6 +273,8 @@
 					-webkit-transform ease-in-out 100ms;
 				transition: transform ease-in-out 100ms,
 					-webkit-transform ease-in-out 100ms;
+				transition: transform ease-in-out 100ms,
+					-webkit-transform ease-in-out 100ms;
 				margin-left: 1.875rem;
 			}
 			details[open] &:before {
@@ -355,6 +364,7 @@
 			line-height: 1.375rem;
 			color: $order-background;
 			&:focus {
+				-webkit-box-shadow: -2px -2px 9px $greyLight;
 				box-shadow: -2px -2px 9px $greyLight;
 			}
 		}
@@ -362,6 +372,8 @@
 	&__slider {
 		> p {
 			position: relative;
+			-webkit-transform: translateY(-250%);
+			-ms-transform: translateY(-250%);
 			transform: translateY(-250%);
 			font-family: 'Lato', sans-serif;
 			font-style: normal;
@@ -371,6 +383,8 @@
 			text-align: right;
 			color: rgba(255, 255, 255, 0.85);
 			@media (max-width: $sm) {
+				-webkit-transform: translateY(50%);
+				-ms-transform: translateY(50%);
 				transform: translateY(50%);
 			}
 		}
@@ -443,10 +457,14 @@
 			color: #272733;
 			@media (min-width: $md) {
 				&:hover {
+					-webkit-transition: 0.12s ease;
+					-o-transition: 0.12s ease;
 					transition: 0.12s ease;
 					background-color: $softGrey;
 				}
 				&:active {
+					-webkit-transform: translateY(1px);
+					-ms-transform: translateY(1px);
 					transform: translateY(1px);
 				}
 			}
@@ -486,10 +504,14 @@
 
 		@media (min-width: $md) {
 			&:hover {
+				-webkit-transition: 0.12s ease;
+				-o-transition: 0.12s ease;
 				transition: 0.12s ease;
 				background-color: $softBlue;
 			}
 			&:active {
+				-webkit-transform: translateY(1px);
+				-ms-transform: translateY(1px);
 				transform: translateY(1px);
 			}
 		}
