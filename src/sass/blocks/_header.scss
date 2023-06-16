@@ -19,6 +19,8 @@
 	}
 
 	&-logo {
+		position: relative;
+		z-index: 120;
 		font-family: 'Raleway';
 		font-style: normal;
 		font-weight: 800;
@@ -85,7 +87,6 @@
 /* burger-menu */
 
 #menu {
-	z-index: 10;
 	@media (min-width: $md) {
 		display: none;
 	}
@@ -153,12 +154,11 @@
 #menu {
 	top: 0;
 	right: 0;
-	z-index: 101;
+	z-index: 125;
 	position: absolute;
 }
 
 .menu-bg {
-	z-index: 2;
 	width: 0;
 	height: 0;
 	margin: 1.875rem 0 1.25rem 1.25rem;
@@ -197,7 +197,7 @@
 }
 
 .change-bg {
-	z-index: 100;
+	z-index: 120;
 	width: 34.5rem;
 	height: 42.75rem;
 	-webkit-transform: translate(50%, -40%);
