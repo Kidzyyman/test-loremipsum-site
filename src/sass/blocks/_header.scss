@@ -87,6 +87,7 @@
 /* burger-menu */
 
 #menu {
+	display: block;
 	@media (min-width: $md) {
 		display: none;
 	}
@@ -159,6 +160,7 @@
 }
 
 .menu-bg {
+	display: block;
 	width: 0;
 	height: 0;
 	margin: 1.875rem 0 1.25rem 1.25rem;
@@ -197,6 +199,7 @@
 }
 
 .change-bg {
+	display: block;
 	z-index: 120;
 	width: 34.5rem;
 	height: 42.75rem;
