@@ -145,8 +145,10 @@
 			position: relative;
 			max-width: 100%;
 			width: clamp(12.5rem, 10.375rem + 10.625vw, 23.125rem);
-
 			border-radius: 3px;
+			@media (max-width: 1020px) {
+				height: 3rem;
+			}
 			@media (max-width: $sm) {
 				margin-right: 0;
 			}
