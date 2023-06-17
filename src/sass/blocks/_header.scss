@@ -180,7 +180,7 @@
 
 	background: $darkBlue;
 
-	border-radius: 100px;
+	border-radius: 50px;
 	-webkit-transition: 0.1s ease;
 	-o-transition: 0.15s ease;
 	-webkit-transition: 0.15s ease;
@@ -212,11 +212,14 @@
 }
 
 .change-bg {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	top: -50%;
-	left: 35%;
-	display: block;
+	top: 100%;
+	display: flex;
+	text-align: center;
 	z-index: 120;
-	width: 16.5rem;
-	height: 21.75rem;
+	width: 13.5rem;
+	height: 18.75rem;
 }
