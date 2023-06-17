@@ -38,9 +38,7 @@
 			@include clickTransform;
 		}
 		> span {
-			> span {
-				color: $softBlue;
-			}
+			color: $softBlue;
 		}
 	}
 

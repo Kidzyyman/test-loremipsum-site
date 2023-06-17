@@ -13,6 +13,7 @@ gulp.task('server', function () {
 		server: {
 			baseDir: 'dist',
 		},
+		reloadOnRestart: true,
 	})
 
 	gulp.watch('src/*.html').on('change', browserSync.reload)
@@ -30,35 +31,27 @@ gulp.task('styles', function () {
 })
 
 gulp.task('watch', function () {
-	gulp.watch('src/sass//*.+(scss|sass|css)', gulp.parallel('styles'))
-	gulp.watch('src//.html', gulp.parallel('html'))
-	gulp.watch('src/js/**/.js').on('change', gulp.parallel('scripts'))
-	gulp.watch('src/icons//.').on('change', gulp.parallel('icons'))
-	gulp.watch('src/img//.').on('change', gulp.parallel('images'))
+	gulp.watch('dist/**/*.html').on('change', browserSync.reload)
+	gulp.watch('src/sass/**/*.+(scss|sass|css)', gulp.parallel('styles'))
+	gulp.watch('src/js/**/*.js').on('change', gulp.parallel('scripts'))
+	gulp.watch('src/fonts/**/*').on('change', gulp.parallel('fonts'))
+	gulp.watch('src/icons/**/*').on('change', gulp.parallel('icons'))
+	gulp.watch('src/img/**/*').on('change', gulp.parallel('images'))
 })
-gulp.task('copyHtml', function () {
+
+gulp.task('html', function () {
 	return gulp
-		.src(['src/**/*.html', '!src/html/**/*.html'])
+		.src('src/*.html')
+		.pipe(
+			fileInclude({
+				prefix: '@@',
+				basepath: 'src/',
+			})
+		)
 		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(gulp.dest('dist'))
 		.pipe(browserSync.stream())
 })
-gulp.task(
-	'html',
-	gulp.series('copyHtml', function () {
-		return gulp
-			.src(['src/index.html'])
-			.pipe(
-				fileInclude({
-					prefix: '@@',
-					basepath: 'src/',
-				})
-			)
-			.pipe(htmlmin({ collapseWhitespace: true }))
-			.pipe(gulp.dest('dist'))
-			.pipe(browserSync.stream())
-	})
-)
 
 gulp.task('scripts', function () {
 	return gulp.src('src/js/**/*.js').pipe(gulp.dest('dist/js'))
@@ -78,17 +71,14 @@ gulp.task('images', function () {
 
 gulp.task(
 	'default',
-	gulp.series(
-		gulp.parallel(
-			'watch',
-			'server',
-			'styles',
-			'scripts',
-			'fonts',
-			'icons',
-			'images'
-		),
-		'copyHtml',
-		'html'
+	gulp.parallel(
+		'watch',
+		'server',
+		'styles',
+		'html',
+		'scripts',
+		'fonts',
+		'icons',
+		'images'
 	)
 )

@@ -29,6 +29,7 @@
 		"sass": "^1.51.0"
 	},
 	"dependencies": {
+		"gulp-flatmap": "^1.0.2",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-minify": "^3.1.0",
 		"jshint": "^2.13.4"
