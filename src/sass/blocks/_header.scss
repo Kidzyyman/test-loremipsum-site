@@ -1,9 +1,9 @@
 .header {
 	position: fixed;
 	width: 100vw;
-	height: 10.31vh;
+	min-height: 6rem;
 	background-color: rgba($darkBlue, $header-opacity);
-	padding: 1.875rem 1.25rem 0;
+	padding: 1.875rem 1.25rem;
 	z-index: 999;
 
 	&-wrapper {
@@ -18,7 +18,7 @@
 		align-items: center;
 	}
 
-	&-logo {
+	&-logo__link-title {
 		position: relative;
 		z-index: 120;
 		font-family: 'Raleway';
@@ -131,10 +131,6 @@
 	display: none;
 }
 
-.nav ul {
-	padding: 0 22px;
-}
-
 .nav li {
 	list-style: none;
 	padding: 1.375rem 0;
@@ -143,7 +139,7 @@
 .nav li a {
 	color: white;
 	font-family: 'Lato', sans-serif;
-	font-size: 1.25rem;
+	font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 	text-decoration: none;
 }
 
@@ -165,10 +161,9 @@
 	height: 0;
 	margin: 1.875rem 0 1.25rem 1.25rem;
 
-	background: -o-radial-gradient(circle, $darkBlue, $blueGrey);
+	background: $darkBlue;
 
-	background: radial-gradient(circle, $darkBlue, $blueGrey);
-	border-radius: 50%;
+	border-radius: 100px;
 	-webkit-transition: 0.3s ease;
 	-o-transition: 0.3s ease;
 	transition: 0.3s ease;
@@ -201,8 +196,8 @@
 .change-bg {
 	display: block;
 	z-index: 120;
-	width: 34.5rem;
-	height: 42.75rem;
+	width: 22.5rem;
+	height: 34.75rem;
 	-webkit-transform: translate(50%, -40%);
 	-ms-transform: translate(50%, -40%);
 	transform: translate(50%, -40%);

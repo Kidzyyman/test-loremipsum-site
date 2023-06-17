@@ -1,8 +1,5 @@
 .hero {
 	background: url(../../img/background-hero.png) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	min-height: 77vh;
 	@include padding-wrapper;
